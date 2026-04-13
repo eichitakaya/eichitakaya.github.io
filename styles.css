@@ -328,6 +328,37 @@
     margin-top: 26px;
   }
 
+  .patient-copy {
+    font-size: 16px;
+    line-height: 1.45;
+  }
+
+  .patient-copy p {
+    margin: 0 0 14px;
+  }
+
+  .patient-copy p:last-child {
+    margin-bottom: 0;
+  }
+
+  .patient-copy-heading {
+    font-weight: 700;
+    margin-top: 26px;
+  }
+
+  .patient-copy-list {
+    display: grid;
+    gap: 8px;
+    margin: 0 0 14px;
+    padding-left: 1.25em;
+  }
+
+  .patient-copy-underline {
+    text-decoration: underline;
+    text-decoration-thickness: 0.08em;
+    text-underline-offset: 0.18em;
+  }
+
   .security-copy {
     font-size: 16px;
     line-height: 1.45;
