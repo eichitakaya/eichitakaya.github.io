@@ -369,6 +369,41 @@
   .faq-answer {
     margin: 0;
   }
+
+  .policy-copy {
+    font-size: 16px;
+    line-height: 1.45;
+  }
+
+  .policy-copy h3 {
+    color: var(--navy);
+    font-size: 18px;
+    margin: 24px 0 8px;
+  }
+
+  .policy-copy h3:first-child,
+  .policy-copy .policy-note + h3 {
+    margin-top: 0;
+  }
+
+  .policy-copy p {
+    margin: 0 0 14px;
+  }
+
+  .policy-copy p:last-child {
+    margin-bottom: 0;
+  }
+
+  .policy-note {
+    font-weight: 700;
+  }
+
+  .policy-list {
+    display: grid;
+    gap: 8px;
+    margin: 0 0 18px;
+    padding-left: 1.25em;
+  }
   
   .news-list {
     display: grid;
