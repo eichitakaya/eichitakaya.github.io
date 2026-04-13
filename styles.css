@@ -404,6 +404,33 @@
     margin: 0 0 18px;
     padding-left: 1.25em;
   }
+
+  .contact-copy {
+    font-size: 16px;
+    line-height: 1.45;
+  }
+
+  .contact-copy p {
+    margin: 0 0 14px;
+  }
+
+  .contact-copy strong {
+    font-weight: 700;
+  }
+
+  .contact-copy a {
+    color: #25258f;
+    text-decoration: underline;
+    text-decoration-thickness: 0.06em;
+    text-underline-offset: 0.14em;
+  }
+
+  .contact-list {
+    display: grid;
+    gap: 10px;
+    margin: 0;
+    padding-left: 1.25em;
+  }
   
   .news-list {
     display: grid;
