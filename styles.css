@@ -282,6 +282,93 @@
     margin: 0 0 12px;
     color: var(--navy);
   }
+
+  .medical-copy {
+    font-size: 16px;
+    line-height: 1.45;
+  }
+
+  .medical-copy p {
+    margin: 0 0 14px;
+  }
+
+  .medical-copy p:last-child {
+    margin-bottom: 0;
+  }
+
+  .medical-copy strong {
+    font-weight: 700;
+    text-decoration: underline;
+    text-decoration-thickness: 0.08em;
+    text-underline-offset: 0.18em;
+  }
+
+  .medical-notes {
+    margin-top: 26px;
+  }
+
+  .service-copy {
+    font-size: 16px;
+    line-height: 1.45;
+  }
+
+  .service-copy p {
+    margin: 0 0 14px;
+  }
+
+  .service-copy p:last-child {
+    margin-bottom: 0;
+  }
+
+  .service-copy strong {
+    font-weight: 700;
+  }
+
+  .service-note {
+    margin-top: 26px;
+  }
+
+  .security-copy {
+    font-size: 16px;
+    line-height: 1.45;
+  }
+
+  .security-copy p {
+    margin: 0;
+  }
+
+  .security-copy strong {
+    font-weight: 700;
+  }
+
+  .security-copy a {
+    color: #25258f;
+    text-decoration: underline;
+    text-decoration-thickness: 0.06em;
+    text-underline-offset: 0.14em;
+  }
+
+  .faq-copy {
+    font-size: 16px;
+    line-height: 1.45;
+  }
+
+  .faq-list {
+    display: grid;
+    gap: 26px;
+    list-style: disc;
+    margin: 0;
+    padding-left: 1.25em;
+  }
+
+  .faq-question {
+    font-weight: 700;
+    margin: 0 0 8px;
+  }
+
+  .faq-answer {
+    margin: 0;
+  }
   
   .news-list {
     display: grid;
