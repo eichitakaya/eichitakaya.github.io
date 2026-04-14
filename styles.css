@@ -502,6 +502,77 @@
     padding-left: 1.25em;
   }
 
+  .contact-page {
+    font-size: 16px;
+    line-height: 1.45;
+  }
+
+  .contact-intro {
+    padding-bottom: 22px;
+  }
+
+  .contact-intro p {
+    margin: 16px 0 0;
+  }
+
+  .contact-type-nav {
+    display: grid;
+    gap: 12px;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .contact-link-button,
+  .contact-form-fallback {
+    align-items: center;
+    background: #1b1f8b;
+    border-radius: 8px;
+    color: #ffffff;
+    display: inline-flex;
+    font-weight: 700;
+    justify-content: center;
+    min-height: 48px;
+    padding: 12px 16px;
+    text-align: center;
+    text-decoration: none;
+  }
+
+  .contact-form-card {
+    background: #ffffff;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    box-shadow: 0 12px 24px rgba(18, 33, 64, 0.08);
+    padding: 20px;
+  }
+
+  .contact-form-card p {
+    margin: 0 0 16px;
+  }
+
+  .contact-copy .contact-link-button {
+    margin-top: 2px;
+  }
+
+  .contact-form-frame {
+    background: #ffffff;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    display: block;
+    width: 100%;
+  }
+
+  .contact-form-frame--medical {
+    height: 1320px;
+  }
+
+  .contact-form-frame--patient,
+  .contact-form-frame--company {
+    height: 1080px;
+  }
+
+  .contact-form-fallback {
+    margin-top: 14px;
+  }
+
   .results-page {
     font-size: 16px;
     line-height: 1.45;
@@ -1116,5 +1187,22 @@
     .results-entry,
     .results-voice-grid {
       grid-template-columns: 1fr;
+    }
+
+    .contact-type-nav {
+      grid-template-columns: 1fr;
+    }
+
+    .contact-form-card {
+      padding: 14px;
+    }
+
+    .contact-form-frame--medical {
+      height: 1380px;
+    }
+
+    .contact-form-frame--patient,
+    .contact-form-frame--company {
+      height: 1140px;
     }
   }
