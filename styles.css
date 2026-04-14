@@ -346,11 +346,50 @@
     margin-top: 26px;
   }
 
+  .patient-copy h3.patient-copy-heading {
+    font-size: 17px;
+    line-height: 1.45;
+    margin: 26px 0 10px;
+    color: var(--ink);
+  }
+
   .patient-copy-list {
     display: grid;
     gap: 8px;
     margin: 0 0 14px;
     padding-left: 1.25em;
+  }
+
+  .patient-flow-list,
+  .patient-note-list {
+    display: grid;
+    gap: 8px;
+    margin: 0 0 14px;
+    padding-left: 1.25em;
+  }
+
+  .patient-flow-list {
+    list-style-position: outside;
+  }
+
+  .patient-note-list {
+    list-style-position: outside;
+  }
+
+  .patient-flow-list li,
+  .patient-note-list li {
+    padding-left: 0.15em;
+  }
+
+  .patient-flow-list strong,
+  .patient-note-list strong {
+    display: inline;
+    margin-right: 0.75em;
+  }
+
+  .patient-flow-note {
+    display: block;
+    margin-top: 2px;
   }
 
   .patient-copy-underline {
