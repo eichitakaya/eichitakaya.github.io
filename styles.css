@@ -524,9 +524,10 @@
   .contact-link-button,
   .contact-form-fallback {
     align-items: center;
-    background: #1b1f8b;
+    background: #eef4ff;
+    border: 2px solid #1b1f8b;
     border-radius: 8px;
-    color: #ffffff;
+    color: #1b1f8b;
     display: inline-flex;
     font-weight: 700;
     justify-content: center;
@@ -534,6 +535,11 @@
     padding: 12px 16px;
     text-align: center;
     text-decoration: none;
+  }
+
+  .contact-link-button:visited,
+  .contact-form-fallback:visited {
+    color: #1b1f8b;
   }
 
   .contact-form-card {
