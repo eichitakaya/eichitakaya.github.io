@@ -118,6 +118,11 @@
     max-width: 180px;
     display: block;
   }
+
+  .brand-link {
+    display: inline-flex;
+    line-height: 0;
+  }
   
   .brand-name {
     color: var(--brand-blue);
