@@ -451,7 +451,7 @@
   }
 
   .policy-copy h3 {
-    color: var(--navy);
+    color: #1b1f8b;
     font-size: 18px;
     margin: 24px 0 8px;
   }
@@ -849,22 +849,31 @@
   .primary-nav {
     display: flex;
     flex-wrap: wrap;
-    gap: 6px 18px;
+    gap: 6px 10px;
     font-size: 14px;
     margin-top: 0;
   }
   
   .primary-nav a {
+    background: transparent;
+    border-radius: 999px;
     color: #1b2a8b;
+    display: inline-flex;
+    line-height: 1.35;
+    min-height: 28px;
+    padding: 4px 12px;
     text-decoration: none;
-    padding: 2px 0;
-    background: none;
     border: none;
-    border-radius: 0;
   }
   
   .primary-nav a:hover {
     color: #0000cc;
+  }
+
+  .primary-nav a.is-active,
+  .primary-nav a.is-active:hover {
+    background: #1b1f8b;
+    color: #ffffff;
   }
   
   .hero-banner {
@@ -1256,6 +1265,13 @@
       min-height: 44px;
       padding: 8px 10px;
       text-align: center;
+    }
+
+    .primary-nav a.is-active,
+    .primary-nav a.is-active:hover {
+      background: #1b1f8b;
+      border-color: #1b1f8b;
+      color: #ffffff;
     }
 
     .hero-banner {
