@@ -16,6 +16,10 @@
   * {
     box-sizing: border-box;
   }
+
+  html {
+    scroll-behavior: smooth;
+  }
   
   body {
     margin: 0;
@@ -788,6 +792,13 @@
     font-size: 13px;
     color: #5d6c86;
   }
+
+  .footer-inner {
+    align-items: center;
+    display: flex;
+    gap: 18px;
+    justify-content: space-between;
+  }
   
   .badge-row {
     display: flex;
@@ -1165,6 +1176,28 @@
     font-weight: 700;
     background: #ffffff;
   }
+
+  .back-to-top {
+    align-items: center;
+    background: #1b1f8b;
+    border: 1px solid #1b1f8b;
+    border-radius: 999px;
+    color: #ffffff;
+    display: flex;
+    font-size: 13px;
+    font-weight: 700;
+    justify-content: center;
+    margin-left: auto;
+    min-height: 42px;
+    padding: 10px 18px;
+    text-decoration: none;
+    width: fit-content;
+  }
+
+  .back-to-top:visited,
+  .back-to-top:hover {
+    color: #ffffff;
+  }
   
   @media (max-width: 900px) {
     .hero-banner {
@@ -1435,6 +1468,16 @@
       line-height: 1.5;
       padding: 22px 0 28px;
       text-align: center;
+    }
+
+    .footer-inner {
+      align-items: center;
+      flex-direction: column-reverse;
+      gap: 14px;
+    }
+
+    .back-to-top {
+      margin-left: 0;
     }
   }
 
