@@ -1089,6 +1089,32 @@
   .news-text {
     font-size: 14px;
   }
+
+  .news-more-link {
+    align-items: center;
+    border: 1px solid #1b1f8b;
+    border-radius: 999px;
+    color: #1b1f8b;
+    display: flex;
+    font-size: 13px;
+    font-weight: 700;
+    justify-content: center;
+    margin: 18px 0 0 auto;
+    min-height: 40px;
+    padding: 9px 18px;
+    text-decoration: none;
+    width: fit-content;
+  }
+
+  .news-more-link:visited,
+  .news-more-link:hover {
+    color: #1b1f8b;
+  }
+
+  .news-page {
+    font-size: 16px;
+    line-height: 1.45;
+  }
   
   .about-lines {
     display: grid;
@@ -1462,6 +1488,12 @@
 
     .contact-form-card {
       padding: 12px;
+    }
+
+    .news-row {
+      align-items: flex-start;
+      grid-template-columns: 1fr;
+      gap: 6px;
     }
 
     footer {
