@@ -67,21 +67,7 @@
 
       <section id="news" class="section">
         <h2 class="section-heading">News</h2>
-        <div class="news-row">
-          <div class="news-date">0000.00.00</div>
-          <div class="news-tag">メディア掲載</div>
-          <div class="news-text">テキストがはいりますテキストがはいりますテキストがはいります。</div>
-        </div>
-        <div class="news-row">
-          <div class="news-date">0000.00.00</div>
-          <div class="news-tag">お知らせ</div>
-          <div class="news-text">テキストがはいりますテキストがはいりますテキストがはいりますテキストがはいりますテキストがはいります。</div>
-        </div>
-        <div class="news-row">
-          <div class="news-date">0000.00.00</div>
-          <div class="news-tag">プレスリリース</div>
-          <div class="news-text">テキストがはいりますテキストがはいりますテキストがはいります。</div>
-        </div>
+        <div id="home-news-list" aria-live="polite"></div>
         <a class="news-more-link" href="news.html">お知らせ一覧へ</a>
       </section>
 
@@ -127,5 +113,32 @@
       </div>
     </footer>
   </div>
+  <script>
+    (function () {
+      const newsList = document.getElementById("home-news-list");
+      if (!newsList) return;
+
+      fetch("news.html")
+        .then((response) => {
+          if (!response.ok) throw new Error("Failed to load news.html");
+          return response.text();
+        })
+        .then((html) => {
+          const doc = new DOMParser().parseFromString(html, "text/html");
+          const getNewsDateValue = (row) => {
+            const dateText = row.querySelector(".news-date")?.textContent.trim() || "";
+            const match = dateText.match(/^(\d{4})\.(\d{2})\.(\d{2})$/);
+            return match ? Number(`${match[1]}${match[2]}${match[3]}`) : 0;
+          };
+          const rows = Array.from(doc.querySelectorAll(".news-page .news-row"))
+            .sort((a, b) => getNewsDateValue(b) - getNewsDateValue(a))
+            .slice(0, 5);
+          newsList.replaceChildren(...rows.map((row) => row.cloneNode(true)));
+        })
+        .catch(() => {
+          newsList.hidden = true;
+        });
+    }());
+  </script>
 </body>
 </html>
