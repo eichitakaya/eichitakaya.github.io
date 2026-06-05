@@ -1090,6 +1090,11 @@
     font-size: 14px;
   }
 
+  .news-text a {
+    color: #1b1f8b;
+    font-weight: 700;
+  }
+
   .news-more-link {
     align-items: center;
     border: 1px solid #1b1f8b;
