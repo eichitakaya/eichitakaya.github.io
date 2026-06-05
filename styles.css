@@ -886,6 +886,43 @@
     background: #1b1f8b;
     color: #ffffff;
   }
+
+  .menu-toggle {
+    align-items: center;
+    background: #ffffff;
+    border: 1px solid #d8e2f1;
+    border-radius: 8px;
+    color: #1b2a8b;
+    cursor: pointer;
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    height: 44px;
+    justify-content: center;
+    padding: 0;
+    width: 44px;
+  }
+
+  .menu-toggle-line {
+    background: currentColor;
+    border-radius: 999px;
+    display: block;
+    height: 2px;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+    width: 20px;
+  }
+
+  .menu-toggle[aria-expanded="true"] .menu-toggle-line:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+  }
+
+  .menu-toggle[aria-expanded="true"] .menu-toggle-line:nth-child(2) {
+    opacity: 0;
+  }
+
+  .menu-toggle[aria-expanded="true"] .menu-toggle-line:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+  }
   
   .hero-banner {
     position: relative;
@@ -1296,13 +1333,16 @@
     }
 
     .header-inner {
-      align-items: stretch;
-      flex-direction: column;
-      gap: 14px;
+      align-items: center;
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 12px;
     }
 
     .brand {
-      justify-content: center;
+      flex: 1 1 auto;
+      justify-content: flex-start;
+      min-width: 0;
     }
 
     .brand-logo {
@@ -1310,12 +1350,21 @@
       max-width: min(220px, 100%);
     }
 
+    .menu-toggle {
+      display: inline-flex;
+      flex: 0 0 auto;
+    }
+
     .primary-nav {
-      display: grid;
+      display: none;
       font-size: 13px;
       gap: 8px;
       grid-template-columns: repeat(2, minmax(0, 1fr));
       width: 100%;
+    }
+
+    .nav-open .primary-nav {
+      display: grid;
     }
 
     .primary-nav a {

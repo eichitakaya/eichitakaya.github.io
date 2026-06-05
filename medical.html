@@ -15,7 +15,12 @@
             <img class="brand-logo" src="landscape_transparent_blue_stroke.png" alt="PulmoGate ロゴ" />
           </a>
         </div>
-        <nav class="primary-nav" aria-label="primary">
+        <button class="menu-toggle" type="button" aria-label="メニューを開く" aria-expanded="false" aria-controls="primary-nav">
+          <span class="menu-toggle-line"></span>
+          <span class="menu-toggle-line"></span>
+          <span class="menu-toggle-line"></span>
+        </button>
+        <nav id="primary-nav" class="primary-nav" aria-label="primary">
           <a href="index.html">HOME</a>
           <a class="is-active" href="medical.html">医療機関の方はこちら</a>
           <a href="patient.html">患者さんはこちら</a>
@@ -121,5 +126,6 @@
       </div>
     </footer>
   </div>
+  <script src="menu.js"></script>
 </body>
 </html>
