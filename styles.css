@@ -1007,6 +1007,30 @@
     padding: 10px 18px;
   }
 
+  .service-status-notice {
+    background: #fff9df;
+    border: 1px solid #e7cf75;
+    border-left: 6px solid #d5a514;
+    border-radius: 8px;
+    box-shadow: 0 10px 22px rgba(31, 41, 66, 0.08);
+    color: #24324a;
+    margin: -8px 0 26px;
+    padding: 18px 22px;
+  }
+
+  .service-status-notice h2 {
+    color: #1b1f8b;
+    font-size: 18px;
+    line-height: 1.4;
+    margin: 0 0 8px;
+  }
+
+  .service-status-notice p {
+    font-size: 15px;
+    line-height: 1.9;
+    margin: 0;
+  }
+
   .home-topics {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -1418,6 +1442,20 @@
       text-align: center;
       white-space: normal;
       width: 100%;
+    }
+
+    .service-status-notice {
+      margin: 0 0 22px;
+      padding: 16px;
+    }
+
+    .service-status-notice h2 {
+      font-size: 17px;
+    }
+
+    .service-status-notice p {
+      font-size: 14px;
+      line-height: 1.75;
     }
 
     .section {
