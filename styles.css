@@ -1001,6 +1001,11 @@
   .hero-banner--sub .hero-text p {
     font-size: 15px;
   }
+
+  .hero-banner--medical .hero-text,
+  .hero-banner--patient .hero-text {
+    max-width: min(960px, 100%);
+  }
   
   .hero-banner--sub .hero-cta {
     font-size: 14px;
