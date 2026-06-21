@@ -1271,9 +1271,9 @@
   
   .profile-grid {
     display: grid;
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: minmax(0, 1.35fr) minmax(360px, 1fr);
     gap: 20px;
-    align-items: start;
+    align-items: stretch;
   }
   
   .profile-card {
@@ -1289,7 +1289,7 @@
     display: block;
     font-size: 22px;
     border-radius: 6px;
-    min-height: 190px;
+    min-height: 320px;
     overflow: hidden;
   }
   
@@ -1612,7 +1612,7 @@
     }
 
     .map-card {
-      min-height: 240px;
+      min-height: 280px;
     }
 
     .contact-link-button,
