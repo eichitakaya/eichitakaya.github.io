@@ -926,14 +926,13 @@
   
   .hero-banner {
     position: relative;
-    background: linear-gradient(90deg, rgba(7, 23, 64, 0.92) 0%, rgba(10, 45, 102, 0.92) 50%, rgba(12, 79, 143, 0.92) 100%),
-      url("lung.png");
+    background: linear-gradient(90deg, rgba(7, 23, 64, 0.92) 0%, rgba(10, 45, 102, 0.92) 50%, rgba(12, 79, 143, 0.92) 100%);
     border-radius: 0;
     padding: 32px 36px;
     margin: 24px 0 30px;
     color: #ffffff;
     overflow: hidden;
-    min-height: 180px;
+    min-height: clamp(210px, 27vw, 310px);
     display: flex;
     align-items: center;
     gap: 24px;
@@ -949,7 +948,36 @@
     position: relative;
     z-index: 1;
     padding-left: 0;
-    max-width: 620px;
+    max-width: min(620px, calc(100% - clamp(210px, 27vw, 310px)));
+  }
+
+  .hero-character {
+    bottom: 0;
+    height: clamp(210px, 27vw, 310px);
+    position: absolute;
+    right: clamp(12px, 3vw, 34px);
+    width: clamp(210px, 27vw, 310px);
+    z-index: 1;
+  }
+
+  .hero-character__video,
+  .hero-character__png {
+    display: block;
+    height: 100%;
+    object-fit: contain;
+    width: 100%;
+  }
+
+  .hero-character__video {
+    display: none;
+  }
+
+  .hero-character[data-media="video"] .hero-character__video {
+    display: block;
+  }
+
+  .hero-character[data-media="video"] .hero-character__png {
+    display: none;
   }
   
   .hero-eyebrow {
@@ -1339,10 +1367,21 @@
     .hero-banner {
       flex-direction: column;
       align-items: flex-start;
+      min-height: 0;
+      padding-bottom: 190px;
     }
   
     .hero-text {
       padding-left: 0;
+      max-width: 100%;
+    }
+
+    .hero-character {
+      height: 190px;
+      left: 50%;
+      right: auto;
+      transform: translateX(-50%);
+      width: 190px;
     }
   
     .hero-lung {
@@ -1660,6 +1699,7 @@
 
     .hero-banner {
       padding: 22px 14px;
+      padding-bottom: 190px;
     }
 
     .hero-text h1 {
