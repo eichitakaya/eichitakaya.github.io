@@ -53,6 +53,12 @@
           <h1>遠隔MDDで患者さんに最適な診断を</h1>
           <p>～セカンドオピニオンにもご活用いただけます～</p>
         </div>
+        <div class="hero-character" role="img" aria-label="アニメーションする肺のキャラクター">
+          <video class="hero-character__video" autoplay loop muted playsinline preload="metadata" aria-hidden="true">
+            <source src="pulpul-lunglung/hopping/pullung0000-0144.webm" type="video/webm; codecs=&quot;vp9&quot;" />
+          </video>
+          <img class="hero-character__png" src="pulpul-lunglung/hopping/pullung0000.png" width="512" height="512" alt="" />
+        </div>
       </section>
 
       <section class="service-status-notice" aria-label="正式提供開始に関するお知らせ">
@@ -143,10 +149,14 @@
     </footer>
   </div>
   <script src="menu.js"></script>
+  <script src="lung-animation.js"></script>
   <script>
     (function () {
       const newsList = document.getElementById("home-news-list");
-      if (!newsList) return;
+      if (!newsList || window.location.protocol === "file:") {
+        if (newsList) newsList.hidden = true;
+        return;
+      }
 
       fetch("news.html")
         .then((response) => {
