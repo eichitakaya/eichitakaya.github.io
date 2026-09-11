@@ -1265,7 +1265,7 @@
 
   .about-kicker {
     color: #1b1f8b;
-    font-size: 14px;
+    font-size: 24px;
     letter-spacing: 0.12em;
     margin: 0 0 4px;
   }
@@ -1551,6 +1551,10 @@
       overflow-wrap: anywhere;
     }
 
+    .about-kicker {
+      font-size: 19px;
+    }
+
     .section-index {
       flex: 0 0 auto;
       font-size: 11px;
@@ -1699,6 +1703,10 @@
 
     .section-heading {
       font-size: 19px;
+    }
+
+    .about-kicker {
+      font-size: 17px;
     }
 
     .card {
