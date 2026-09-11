@@ -926,8 +926,7 @@
   
   .hero-banner {
     position: relative;
-    background: linear-gradient(90deg, rgba(7, 23, 64, 0.92) 0%, rgba(10, 45, 102, 0.92) 50%, rgba(12, 79, 143, 0.92) 100%),
-      url("lung.png");
+    background: linear-gradient(90deg, rgba(7, 23, 64, 0.92) 0%, rgba(10, 45, 102, 0.92) 50%, rgba(12, 79, 143, 0.92) 100%);
     border-radius: 0;
     padding: 32px 36px;
     margin: 24px 0 30px;
@@ -1133,10 +1132,6 @@
     border-bottom: 2px dotted #9aa2b0;
   }
 
-  .news-row--media {
-    align-items: flex-start;
-  }
-  
   .news-row:last-child {
     border-bottom: none;
   }
@@ -1158,15 +1153,9 @@
   
   .news-text {
     font-size: 14px;
-  }
-
-  .news-text--media {
-    display: grid;
-    gap: 12px;
-  }
-
-  .news-text--media p {
-    margin: 0;
+    line-height: 1.7;
+    min-width: 0;
+    overflow-wrap: anywhere;
   }
 
   .news-gallery {
@@ -1180,12 +1169,35 @@
   }
 
   .news-gallery img {
-    aspect-ratio: 1 / 1;
     border: 1px solid #d8dce7;
     border-radius: 6px;
     display: block;
-    object-fit: cover;
+    height: auto;
     width: 100%;
+  }
+
+  .news-gallery--single {
+    grid-template-columns: 1fr;
+  }
+
+  .news-detail {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .news-detail-meta {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 16px;
+  }
+
+  .news-detail-title {
+    color: #1b1f8b;
+    font-size: clamp(20px, 3vw, 28px);
+    line-height: 1.65;
+    margin: 0 0 24px;
+    overflow-wrap: anywhere;
   }
 
   .news-gallery figcaption {
@@ -1198,6 +1210,17 @@
   .news-text a {
     color: #1b1f8b;
     font-weight: 700;
+    text-underline-offset: 0.2em;
+  }
+
+  .news-text a:hover {
+    text-decoration-thickness: 2px;
+  }
+
+  .news-text a:focus-visible,
+  .news-more-link:focus-visible {
+    outline: 2px solid #1b1f8b;
+    outline-offset: 4px;
   }
 
   .news-more-link {
@@ -1232,10 +1255,19 @@
   }
   
   .about-line {
-    display: flex;
-    align-items: center;
+    display: grid;
+    grid-template-columns: 28px minmax(0, 1fr);
+    align-items: start;
     gap: 14px;
     font-size: 16px;
+    line-height: 1.7;
+  }
+
+  .about-kicker {
+    color: #1b1f8b;
+    font-size: 14px;
+    letter-spacing: 0.12em;
+    margin: 0 0 4px;
   }
   
   .about-icon {
@@ -1265,8 +1297,7 @@
   .about-label {
     font-weight: 700;
     color: #1b1f8b;
-    min-width: 80px;
-    text-transform: lowercase;
+    margin: 0;
   }
   
   .profile-grid {
@@ -1581,7 +1612,7 @@
       align-items: flex-start;
       display: grid;
       font-size: 14px;
-      grid-template-columns: 28px minmax(64px, auto) minmax(0, 1fr);
+      grid-template-columns: 28px minmax(0, 1fr);
       line-height: 1.6;
     }
 
